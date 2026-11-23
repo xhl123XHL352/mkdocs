@@ -160,6 +160,12 @@ Notice that your source documentation has been output as two HTML files named
 been copied into the `site` directory as part of the documentation theme. You
 even have a `sitemap.xml` file and `mkdocs/search_index.json`.
 
+If you need to browse the built HTML directly from disk, set
+[`use_directory_urls: false`](user-guide/configuration.md#use_directory_urls) in
+`mkdocs.yml` before building. MkDocs will then generate `site/about.html` and
+link to that file, so you can open `site/index.html` without a web server. For
+a local preview that includes search, use `mkdocs serve`.
+
 If you're using source code control such as `git` you probably don't want to
 check your documentation builds into the repository. Add a line containing
 `site/` to your `.gitignore` file.
